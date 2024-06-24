@@ -3,4 +3,11 @@
 ### GET products
 GET {{baseUrl}}/products
 
-###
+### Create product
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "price": 100
+}
