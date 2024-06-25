@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3001
-@page = 1
+@page = 10
 @pageLimit = 5
 
 ### GET products
@@ -15,4 +15,16 @@ Content-Type: application/json
 }
 
 ### Get product by id
-GET {{baseUrl}}/products/146564
+GET {{baseUrl}}/products/48
+
+### Update product by id
+PATCH {{baseUrl}}/products/48
+Content-Type: application/json
+
+{
+    "name": "Updated product",
+    "price": 1005
+}
+
+### Delete product by id
+DELETE {{baseUrl}}/products/48
