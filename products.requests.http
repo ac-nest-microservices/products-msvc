@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### Get product by id
-GET {{baseUrl}}/products/48
+GET {{baseUrl}}/products/47
 
 ### Update product by id
 PATCH {{baseUrl}}/products/48
@@ -27,4 +27,4 @@ Content-Type: application/json
 }
 
 ### Delete product by id
-DELETE {{baseUrl}}/products/48
+DELETE {{baseUrl}}/products/47
