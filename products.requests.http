@@ -1,7 +1,9 @@
-@baseUrl = http://localhost:3000
+@baseUrl = http://localhost:3001
+@page = 1
+@pageLimit = 5
 
 ### GET products
-GET {{baseUrl}}/products
+GET {{baseUrl}}/products?page={{page}}&limit={{pageLimit}}
 
 ### Create product
 POST {{baseUrl}}/products
@@ -11,3 +13,6 @@ Content-Type: application/json
     "name": "Product 1",
     "price": 100
 }
+
+### Get product by id
+GET {{baseUrl}}/products/146564
