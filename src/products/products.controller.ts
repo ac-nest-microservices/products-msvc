@@ -3,8 +3,7 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 
 import { PaginationDto } from '../common/dto';
 import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
-import { UpdateProductDto } from './dto/update-product.dto';
+import { CreateProductDto, UpdateProductDto } from './dto';
 
 @Controller('products')
 export class ProductsController {
@@ -33,5 +32,10 @@ export class ProductsController {
   @MessagePattern('removeProduct')
   remove(@Payload('id') id: string) {
     return this.productsService.remove(+id);
+  }
+
+  @MessagePattern('validateProducts')
+  validateProducts(@Payload() ids: number[]) {
+    return this.productsService.validateProducts(ids);
   }
 }
